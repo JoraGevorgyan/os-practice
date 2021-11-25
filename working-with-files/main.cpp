@@ -63,7 +63,14 @@ void copy_info(int input_fd, int output_fd)
 	}
 }
 
+int copy_files(int argc, char** argv);
+
 int main(int argc, char** argv)
+{
+	return copy_files(argc, argv);
+}
+
+int copy_files(int argc, char** argv)
 {
 	if (argc != 3)
 	{
