@@ -65,9 +65,21 @@ void copy_info(int input_fd, int output_fd)
 
 int copy_files(int argc, char** argv);
 
+int list_content(int argc, char** argv)
+{
+	if (argc != 2)
+	{
+		std::cerr << "One path is required only!!" << std::endl;
+		return -1;
+	}
+
+	return 0;
+}
+
 int main(int argc, char** argv)
 {
-	return copy_files(argc, argv);
+//	return copy_files(argc, argv);
+	return list_content(argc, argv);
 }
 
 int copy_files(int argc, char** argv)
