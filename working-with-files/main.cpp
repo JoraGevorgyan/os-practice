@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include <cerrno>
 
 void check(ssize_t value, const std::string& failure_msg)
 {
