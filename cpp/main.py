@@ -1,8 +1,7 @@
 #!/bin/python3
 
 def read_int() -> int:
-    tmp = int(input("Enter some integer number: "))
-    return tmp
+    return int(input("Enter some integer number: "))
 
 
 def get_array(length: int) -> list:
