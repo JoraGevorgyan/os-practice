@@ -57,6 +57,7 @@ void copy_info(int input_fd, int output_fd)
 		check(count, "error when reading from file!!");
 		if (count == 0)
 		{
+			delete[] buffer;
 			return;
 		}
 		ssize_t written = write(output_fd, buffer, count);
