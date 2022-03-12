@@ -13,15 +13,15 @@ void check(int ret_value)
 }
 
 
-void using_child()
+void using_child(int pid)
 {
-	std::cout << "message from child" << std::endl;
+	std::cout << "child, got pid: " << pid << std::endl;
 }
 
 
-void using_parent()
+void using_parent(int pid)
 {
-	std::cout << "message from parent" << std::endl;
+	std::cout << "parent, got pid: " << pid << std::endl;
 }
 
 int main()
@@ -31,14 +31,14 @@ int main()
 
 	if (child == 0)
 	{
-		using_child();
+		using_child(child);
 	}
 	else
 	{
-		using_parent();
+		using_parent(child);
 	}
 	
-	std::cout << "this part will be ran by both processes" << std::endl;
+	std::cout << "from: " << getpid() << std::endl;
 
 	return 0;
 }
